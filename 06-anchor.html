@@ -12,10 +12,13 @@ initial-scale=1.0"
   </head>
   <body>
     <h1 title="여기는 제목입니다" id="heading" class="bigText" tabindex="0">하이퍼링크 관련 속성</h1>
-    <!-- 전역 속성(모든 요소들이 다 가지고 있는 속성): id, class, title, style, hidden, lang, tabindex, date- 등 -->
+    <!-- 전역 속성(모든 요소들이 다 가지고 있는 속성): id, class, title, style, hidden, lang, tabindex, date-* 등 -->
     <!-- hidden: DOM에 나타나지 않는 없는 요소이기 때문에 스크린리더가 읽지 않음, 동적인 처리가 필요할 때 사용함-->
-    <!-- tabindex:  -->
-    <!-- date-: 사용자 커스텀 가능 -->
+    <!-- tabindex: tabindex=“0”
+상호작용하지 않는 요소에도 키보드 포커스를 잡히게 할 때 사용한다.
+tabindex=“-1”
+반대로 원래 상호작용하는 요소에 포커스가 잡히지 않게 할 때 사용한다. -->
+    <!-- data-: 사용자 커스텀 가능 -->
     <div title="마우스를 올리면 툴팁이 보입니다">
       <!-- title: SEO 측면에서 좋지 않음 -->
       <a href="/" style="color: blueviolet">더보기</a>
