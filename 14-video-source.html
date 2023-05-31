@@ -1,1 +1,30 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width
+initial-scale=1.0"
+    />
+    <title>비디오와 소스 요소</title>
+  </head>
+  <body>
+    <figure>
+      <video class="fullsize" poster="video/poster.jpg" controls autoplay muted>
+        <!-- poster: 섬네일 -->
+        <!-- autoplay: 브라우저 정책상 시각장애인 접근성의 문제로 막아둠 / muted를 함께 사용할 경우 사용 가능함 -->
+        <source src="video/google-developer-stories.mp4" type="video/mp4" />
+        <source src="video/google-developer-stories.mov" type="video/mov" />
+        <source src="video/google-developer-stories.ogg" type="video/ogg" />
+        <source src="video/google-developer-stories.webm" type="video/webm" />
+        <track src="video/google-developer-stories-subtitles-en.vtt" kind="captions" srclang="en" label="English Caption" />
+        <!-- track 여러개 사용 가능 -->
+      </video>
+      <figcaption>구글 개발자 이야기</figcaption>
+    </figure>
+    <video src="video/google-developer-stories.mp4" controls></video>
+    <!-- video가 하나일 경우 개별로 사용 가능 -->
+  </body>
+</html>
