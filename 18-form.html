@@ -12,7 +12,8 @@ initial-scale=1.0"
   </head>
   <body>
     <h1>폼 관련 요소</h1>
-    <form action="서버 URL" method="get/post" id="searchForm">
+    <form action="서버 URL" method="get/post" id="searchForm" name="fieldName">
+      <!-- https://formspree.io/ 정적 페이지에 이메일 전송 기능을 무료로 구현할 수 있도록 도와주는 서비스 -->
       <fieldset>
         <!-- 해당 요소 내에서 flex를 사용할 경우 무너지는 경우가 있어 div를 사용해 디자인 -->
         <legend>검색</legend>
@@ -37,5 +38,122 @@ initial-scale=1.0"
     <!-- HTML5부터 button이 form 태그의 id 값을 from 요소로 넣어주면 form 밖에서도 전송 가능 -->
     <!-- form의 action으로 전송 -->
     <!-- 추가적인 요소는 https://www.miketaylr.com/pres/html5/forms2.html 참고 -->
+
+    <form name="form" action="xxx.php" method="post" target="_blank">
+      <!-- action="xxx.php" 액션은 개발단 페이지 보통 php,jsp,asp -->
+      <!--면접에서 많이 물어봄. 주소줄에 검색되는 내용, 내가 입력된 내용이 나오는것을 get/ 사용자가 입력한내용이 드러나지않는것 post -->
+      <fieldset>
+        <legend>타이틀</legend>
+        <!-- 폼안에는 모든태그가 다 들어간다 -->
+        <p>
+          <label for="userid">아이디</label>
+          <input type="text" name="" id="userid" />
+          <!-- 반드시 lable for + in -->
+        </p>
+        <p>
+          <label for="userpw">비밀번호</label>
+          <input type="text" id="userpw" />
+        </p>
+        <p>
+          <label for="userpw2">비밀번호재설정</label>
+          <input type="text" id="userpw2" />
+        </p>
+        <p>
+          <label for="add">주소</label>
+          <input type="text" name="" id="add" />
+          <input type="text" name="" />
+          <input type="text" name="" />
+          <!-- 여러개가 연결될 경우에는 맨앞에 하나만 for연결 -->
+        </p>
+        <p>
+          <!-- checkbox는 name이 필수! name이 달라야한다. 체크박스는 css 스타일처리가 안된다 -->
+          <input type="checkbox" name="chk1" id="chk1" />
+          <label for="chk1">사탕</label>
+        </p>
+        <p>
+          <input type="checkbox" name="chk2" id="chk2" />
+          <label for="chk2">초콜릿</label>
+        </p>
+        <p>
+          <input type="checkbox" name="chk30" id="chk3" />
+          <label for="chk3">껌</label>
+        </p>
+        <p>
+          <input type="checkbox" name="chk4" id="chk4" />
+          <label for="chk4">캬라멜</label>
+        </p>
+
+        <p>
+          <!-- 반드시 name이 존재해야하고 이름이 같아야한다 radio도 css스타일처리가 안된다-->
+          <label for="rad1">1학년</label>
+          <input type="radio" id="rad1" name="rad" />
+        </p>
+        <p>
+          <label for="rad2">2학년</label>
+          <input type="radio" id="rad2" name="rad" />
+        </p>
+        <p>
+          <label for="rad3">3학년</label>
+          <input type="radio" id="rad3" name="rad" />
+        </p>
+        <p>
+          <label for="rad4">4학년</label>
+          <input type="radio" id="rad4" name="rad" />
+        </p>
+
+        <p>
+          <!-- css처리가 안된다 가능하게 하려면 js처리할수있다 -->
+          <!-- 푸터의 패밀리사이트는 a+ul로 작성하는것이 좋다(19일차과제 헤더 언어부분과 동일) -->
+          <label for="fam">패밀리사이트</label>
+          <select>
+            <option>회사</option>
+            <option>회사</option>
+            <option>회사</option>
+            <option>회사</option>
+            <option>회사</option>
+          </select>
+        </p>
+        <p>
+          <!-- <input type="file" /> 전송파일 선택필드, 첨부파일 -->
+          <label for="up">업로드</label>
+          <input type="file" id="up" />
+        </p>
+        <p>
+          <!-- 화면에 보이지 않음 개발자가 중간값을 잠시 담아두었다가 꺼내서 사용하기 위한 용도 -->
+          <!-- <input type="hidden" /> 감춰진 필드 작성. 화면에는 표시하지 않고 프로그램에 전송하는 데이터를 지정.-->
+          <input type="hidden" />
+        </p>
+        <p>
+          <!-- 여러줄로 된 텍스트필드를 생성하는 인라인요소 textarea요소. cols="폭" rows="줄수" 속성은 필수. -->
+          <label for="comm">문의하기</label>
+          <textarea id="comm" cols="50" rows="5"></textarea>
+          <!-- col : 글자수 row : 줄수 -->
+        </p>
+
+        <p>
+          <!-- 회원가입 전송/취소 -->
+          <!-- <input type="submit" 제출 /> 전송버튼 / <input type="reset" /> 리셋버튼 -->
+          <input type="submit" value="확인" />
+          <input type="reset" value="다시쓰기" />
+        </p>
+        <p>
+          <!-- 의미없는 버튼 : js연결 -->
+          <input type="button" value="확인" />
+        </p>
+        <p>
+          <!-- 많이 사용하지는 않지만 알아두기 -->
+          <input type="image" src="주소" />
+          <!-- 요즘 -->
+          <botton>
+            <img src="" alt="" />
+            <i class="폰트아이콘"></i>
+          </botton>
+        </p>
+        <p>
+          <!-- text랑 다른점 글쓰면 끝에 엑스표지우는표시 나타남 -->
+          <input type="search" />
+        </p>
+      </fieldset>
+    </form>
   </body>
 </html>
