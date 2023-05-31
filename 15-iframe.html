@@ -1,1 +1,43 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width
+initial-scale=1.0"
+    />
+    <title>iframe 요소</title>
+  </head>
+  <body>
+    <h1>인라인 프레임</h1>
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/JRjqMW7Thfk"
+        title="React 파일 업로드 컴포넌트 접근성 개선"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <!-- iframe: 접근성 측면에서 title 필수 -->
+    </div>
+    <figure>
+      <!-- figure: 기본 여백이 내장됨 -->
+      <div class="iframe-container iframe16">
+        <!-- 반응형 디자인을 위한 속성 -->
+        <iframe
+          class="fullsize"
+          width="560"
+          height="315"
+          title="웹접근성과 웹표준 개념"
+          frameborder="0"
+          allowfullscreen
+          src="https://www.youtube.com/embed/fUcIe7-2zxw"
+        ></iframe>
+      </div>
+    </figure>
+  </body>
+</html>
