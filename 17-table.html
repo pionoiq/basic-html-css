@@ -1,1 +1,86 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width
+initial-scale=1.0"
+    />
+    <title>테이블 관련 요소</title>
+  </head>
+  <body>
+    <h1>cpation</h1>
+    <table border="1">
+      <!-- <caption>
+        <p>Column one has the location and size of accommodation, other columns show the type and number of properties available</p>
+      </caption> -->
+      <thead>
+        <tr>
+          <!-- scope 속성 : 셀의 종류를 명시 -->
+          <th>과목명</th>
+          <th scope="col">HTML/CSS</th>
+          <th scope="col">Javascript</th>
+          <th scope="col">React</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>금윤호</th>
+          <td>100</td>
+          <td>95</td>
+          <td>98</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th>범쌤</th>
+          <td>97</td>
+          <td>100</td>
+          <td>99</td>
+        </tr>
+        <tr>
+          <th>홍길동</th>
+          <td>80</td>
+          <td>75</td>
+          <td>63</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>headers/aria-describedby</h1>
+    <p id="tableDesc"></p>
+    <!-- id와 aria-describedby를 연결 -->
+    <table border="1" summary="표의 요약 정보" aria-describedby="tableDesc">
+      <!-- <caption>
+        <p>Column one has the location and size of accommodation, other columns show the type and number of properties available</p>
+      </caption> -->
+      <tr>
+        <!-- scope 속성 : 셀의 종류를 명시 -->
+        <th>과목명</th>
+        <th id="html">HTML/CSS</th>
+        <th id="js">Javascript</th>
+        <th id="react">React</th>
+      </tr>
+      <tr>
+        <th id="ma01">김미리</th>
+        <td headers="html ma01">100</td>
+        <!-- 관련 있는 정보와 연결 -->
+        <td headers="js ma01">95</td>
+        <td headers="react ma01">98</td>
+      </tr>
+      <tr>
+        <th id="ma02">임시연</th>
+        <td>97</td>
+        <td>100</td>
+        <td>99</td>
+      </tr>
+      <tr>
+        <th id="ma03">김태진</th>
+        <td>80</td>
+        <td>75</td>
+        <td>63</td>
+      </tr>
+    </table>
+  </body>
+</html>
