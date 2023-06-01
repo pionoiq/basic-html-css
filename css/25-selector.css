@@ -6,6 +6,12 @@
   color: inherit;
 }
 
+/* 가상 요소 선택자 */
+::selection {
+  background: #373e6a;
+  color: hotpink;
+}
+
 /* id, 태그 선택자에 직접 디자인 권장X */
 /* 태그 선택자 */
 body {
@@ -13,26 +19,71 @@ body {
   font-weight: 300;
   margin: 0;
   background-color: #000000;
-  /* background-color: #181818; */
   /* 무광 블랙 */
-  color: #fff;
-  /* color: rgb(255, 0, 255, 0.8); */
+  /* background-color: #181818; */
+  /* h색조 s채도 l명도 a투명도 */
   /* color: hsla(110, 100%, 30%, 0.9); */
-  /* 색조 채도 명도 투명도 */
+  color: hsla(110, 100%, 100%, 1);
 }
 
 /* 클래스 선택자 */
 .fancy {
   font-weight: bold;
-  text-shadow: 4px 4px 5px #77f;
+  text-shadow: 4px 4px 3px #77f;
 }
-ul.fancy {
+
+.align {
+  text-align: center;
+}
+
+ul.menu {
   margin: 0;
   padding-left: 0;
-  color: #f00;
+  color: #0f0;
 }
 
 /* 아이디 선택자 */
 #demo {
   border: red 5px solid;
+}
+
+/* 속성 선택자 */
+.menu a[href$=".html"] {
+  background-color: blue;
+}
+
+/* 선택자 목록 */
+.fancy,
+.menu {
+  font-size: 24px;
+}
+
+/* 가상 요소 선태자 */
+.align::before {
+  content: "이전 요소";
+}
+
+.align::after {
+  content: "다음 요소";
+}
+
+/* 가상 클래스 */
+.menu li:nth-child(odd) {
+  color: yellow;
+}
+/* 1번째부터 2번째까지 범위 선택자 */
+/* .menu li:nth-child(-n + 2) .menu li:nth-child(n + 7) {
+  color: yellow;
+} */
+/* .menu li:nth-child(odd) {
+  color: yellow;
+} */
+
+.menu a:hover {
+  border: 5px solid orange;
+}
+
+h1.menu:hover,
+h1.menu:focus {
+  background-color: teal;
 }
