@@ -1,4 +1,38 @@
+/* CSS 선택자(Selector
+) */
+
+/* 전체 선택자 */
+* {
+  color: inherit;
+}
+
+/* id, 태그 선택자에 직접 디자인 권장X */
+/* 태그 선택자 */
 body {
   font-family: "SUIT";
   font-weight: 300;
+  margin: 0;
+  background-color: #000000;
+  /* background-color: #181818; */
+  /* 무광 블랙 */
+  color: #fff;
+  /* color: rgb(255, 0, 255, 0.8); */
+  /* color: hsla(110, 100%, 30%, 0.9); */
+  /* 색조 채도 명도 투명도 */
+}
+
+/* 클래스 선택자 */
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 5px #77f;
+}
+ul.fancy {
+  margin: 0;
+  padding-left: 0;
+  color: #f00;
+}
+
+/* 아이디 선택자 */
+#demo {
+  border: red 5px solid;
 }
