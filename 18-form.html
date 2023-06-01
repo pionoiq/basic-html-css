@@ -18,9 +18,15 @@ initial-scale=1.0"
         <!-- 해당 요소 내에서 flex를 사용할 경우 무너지는 경우가 있어 div를 사용해 디자인 -->
         <legend>검색</legend>
         <div>
+          <!-- 1:1로 대응되는 label이 반드시 필요 -->
+          <!-- 명시적인 labeling: 권장 -->
           <label for="web-serch">검색</label>
           <input type="search" name="web-serch" id="web-serch" />
-          <!-- 1:1로 대응되는 label이 반드시 필요 -->
+          <!-- 암묵적인 labeling -->
+          <label for="web-serch"
+            >검색
+            <input type="search" name="web-serch" id="web-serch" />
+          </label>
         </div>
         <div>
           <label for=""></label>
