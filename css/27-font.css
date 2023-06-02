@@ -1,14 +1,35 @@
-body {
-  font-family: "SUIT";
-  font-weight: 300;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap");
+
+html {
+  font-size: 0.625em;
+  /* 16 * 0.625 = 10 */
+  /* ctrl+shift+m */
 }
 
-ul {
-  border: 1px solid #aaa;
-  height: 1000px;
-  background-repeat: no-repeat;
-  background-image: url("../images/sun.png"), url("../images/cloud.png"),
-    url("../images/tree.png");
-  background-size: 100px 100px, 450px 150px, 350px 600px;
-  background-position: 250px 0, 200px 0, 0 0;
+body {
+  font-size: 1rem;
+  /* root를 기준으로 계산 */
+  /* root-font-size * rem */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* Gor~ Times 컴퓨터에 내장된 폰트 */
+  /* serif => 글꼴군 */
+  /* serif = 날카로운, 삐침이 있는 글꼴 */
+  /* sans-serif = 고딕체 */
+  /* 글꼴군을 설정해야 대체 폰트가 없을 경우에도 동일한 환경을 제공함 */
+}
+
+h1 {
+  font-size: 3em;
+  font-family: "Noto Sans KR", sans-serif;
+  /* font-size: 200%; */
+  /* font에서는 동일하나 여백에서는 em 단위와 백분율이 다를 수 있음 */
+}
+
+p {
+  font-size: 2em;
+  line-height: 1.5em;
+  /* 넘버 단위 = 단위를 붙이지 않은 숫자. 현재 글자 크기 * 넘버단위 */
+  /* line-height는 font-size가 없을 경우 상속받은 값을 기준으로 함 */
+  /* em 단위는 line-height에서 사용 자제 */
+  font-weight: 100;
 }
